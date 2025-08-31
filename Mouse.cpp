@@ -137,7 +137,7 @@ int Mouse::readFromMouse(uint8_t *request, size_t requestSize, uint8_t *response
         cout<<"Unnable to receive data"<<endl;
         return -2;
     }
-
+    return 0;
 
 }
 
@@ -203,6 +203,9 @@ void Mouse::listDevices() {
                 break;
             case BLOODY_J95S_PID:
                 name = "Bloody J95S";
+                break;
+            case BLOODY_RT7_PID:
+                name = "Bloody RT7";
                 break;
             default:
                 name = "Unknown";
